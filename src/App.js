@@ -1,8 +1,14 @@
 import './App.css';
+import JobsComponent from './components/Jobs';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
-    <div>new</div>
+    <div className='App'>
+      {/* <SearchBar /> */}
+      <JobsComponent />
+    </div>
+    
   );
 }
 

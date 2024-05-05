@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  width: 70%; /* Set width to 80% */
+  margin: 0 auto; /* Set margins to auto */
 }
 
 .App-logo {
@@ -36,3 +37,167 @@
     transform: rotate(360deg);
   }
 }
+
+/* Jobcard CSS */
+
+/* Jobcard CSS */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-gap: 40px; /* Spacing between cards */
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Rounded edges */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition effect for transform and box-shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.job-card:hover {
+  transform: scale(1.01); /* Expand the card by 5% on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.job-top {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 10px; /* Add margin bottom */
+}
+
+
+.job-salary{
+  color: #5f5f61;
+  font-size: 0.9rem;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.info-container {
+  flex: 1; /* Take remaining space */
+}
+
+.company-name {
+  color: #5f5f61;
+  margin: 0;
+  margin-right: 10px; /* Add margin-right */
+}
+
+.company-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about-company{
+  font-size: larger;
+  font-weight:500;
+}
+
+.about-us{
+  font-size: large;
+  font-weight:500;
+}
+
+.job-role,
+.job-location {
+  margin: 0; /* Remove margin */
+}
+
+.job-description{
+  --max-lines: 10;
+  --line-height:1.4;
+
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);
+
+  overflow: hidden;
+  position: relative;
+}
+
+.job-description::before{
+  content: "";
+  position: absolute;
+  height: calc(1em * var(--line-height));
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.min-exp {
+  color: #5f5f61;
+}
+
+.salary-description-container p {
+  margin: 0;
+}
+
+.apply-button {
+  width: 100%;
+  background-color: rgb(136, 241, 181); /* Set background color */
+  color: black; /* Set text color */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer */
+  display: flex; /* Display as flex */
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  font-size: 1rem;
+  font: bold;
+}
+
+.referral-button {
+  width: 100%;
+  background-color: rgb(75, 69, 238); /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer */
+  display: flex; /* Display as flex */
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  font-size: 1rem;
+  font: bold;
+  margin-top: 10px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.loading-buffer {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
