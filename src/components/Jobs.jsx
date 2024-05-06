@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import JobCard from "./JobCard";
 import FilterBar from "./FilterBar";
 import Modal from "./Modal";
 
 function JobsComponent() {
     const [jobs, setJobs] = useState([]);
-    const [totalCount, setTotalCount] = useState(0);
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
     const [filters, setFilters] = useState({});
@@ -77,7 +76,7 @@ function JobsComponent() {
             } else {
                 setJobs(prevJobs => [...prevJobs, ...filteredJobs]);
             }
-            setTotalCount(result.totalCount || 0);
+            
         } catch (error) {
             console.error("Error fetching data:", error);
         } finally {
@@ -85,16 +84,16 @@ function JobsComponent() {
         }
     };
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         if (!loading && window.innerHeight + window.scrollY >= document.body.scrollHeight) {
             setPage(prevPage => prevPage + 1);
         }
-    };
+    }, [loading]);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [loading]);
+    }, []);
 
     const applyFilters = (newFilters) => {
         setFilters(newFilters);
