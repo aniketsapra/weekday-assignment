@@ -201,3 +201,23 @@
   }
 }
 
+.filtersection {
+  display: flex;
+  gap: 10px;
+  font-size: small;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.select {
+  flex: 1;
+}
+
+.custom-input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  margin-left: 2px;
+  color: #cccccc;
+}
+
