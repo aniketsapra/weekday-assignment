@@ -1,4 +1,3 @@
-// FilterBar.jsx
 import React, { useState } from 'react';
 import Select from 'react-select';
 import '../App.css';
@@ -30,7 +29,7 @@ function FilterBar({ setFilters }) {
     const minExpOptions = Array.from({ length: 10 }, (_, index) => ({ value: index + 1, label: `${index + 1}` }));
 
     const locationOptions = [
-        { value: 'banglore', label: 'Banglore' },
+        { value: 'bangalore', label: 'Bangalore' },
         { value: 'chennai', label: 'Chennai' },
         { value: 'delhi ncr', label: 'Delhi NCR' },
         { value: 'mumbai', label: 'Mumbai' },

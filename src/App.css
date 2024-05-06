@@ -38,13 +38,13 @@
   }
 }
 
-/* Jobcard CSS */
+
 
 /* Jobcard CSS */
 .job-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-  grid-gap: 40px; /* Spacing between cards */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 40px; 
 }
 
 .job-card {
@@ -53,20 +53,20 @@
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 10px;
-  border-radius: 10px; /* Rounded edges */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transition effect for transform and box-shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  border-radius: 10px; 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .job-card:hover {
-  transform: scale(1.01); /* Expand the card by 5% on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.01); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .job-top {
   display: flex;
-  align-items: center; /* Align items vertically */
-  margin-bottom: 10px; /* Add margin bottom */
+  align-items: center; 
+  margin-bottom: 10px; 
 }
 
 
@@ -82,13 +82,13 @@
 }
 
 .info-container {
-  flex: 1; /* Take remaining space */
+  flex: 1; 
 }
 
 .company-name {
   color: #5f5f61;
   margin: 0;
-  margin-right: 10px; /* Add margin-right */
+  margin-right: 10px; 
 }
 
 .company-name:hover {
@@ -108,7 +108,7 @@
 
 .job-role,
 .job-location {
-  margin: 0; /* Remove margin */
+  margin: 0; 
 }
 
 .job-description{
@@ -143,21 +143,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Ensure modal is on top */
-  overflow: auto; /* Allow scrolling when modal content exceeds viewport */
+  z-index: 999; 
+  overflow: auto; 
 }
 
 .modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Maximum width of the modal */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  width: 80%; 
+  max-width: 600px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 .close-button {
@@ -200,14 +200,14 @@
 
 .apply-button {
   width: 100%;
-  background-color: rgb(136, 241, 181); /* Set background color */
-  color: black; /* Set text color */
-  border: none; /* Remove border */
-  padding: 10px; /* Add padding */
-  border-radius: 5px; /* Add border radius */
-  cursor: pointer; /* Add cursor pointer */
-  display: flex; /* Display as flex */
-  align-items: center; /* Align items vertically */
+  background-color: rgb(136, 241, 181); 
+  color: black; 
+  border: none; 
+  padding: 10px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
   justify-content: center;
   font-size: 1rem;
   font: bold;
@@ -215,14 +215,14 @@
 
 .referral-button {
   width: 100%;
-  background-color: rgb(75, 69, 238); /* Set background color */
-  color: white; /* Set text color */
-  border: none; /* Remove border */
-  padding: 10px; /* Add padding */
-  border-radius: 5px; /* Add border radius */
-  cursor: pointer; /* Add cursor pointer */
-  display: flex; /* Display as flex */
-  align-items: center; /* Align items vertically */
+  background-color: rgb(75, 69, 238); 
+  color: white; 
+  border: none; 
+  padding: 10px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
   justify-content: center;
   font-size: 1rem;
   font: bold;

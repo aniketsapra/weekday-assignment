@@ -26,7 +26,7 @@ function JobCard({ job, onSelectJob }) {
           <p className="about-company">About Company:</p>
           <p className="about-us">Abous us</p>
           <p className="job-description">{job.jobDetailsFromCompany || 'Not Mentioned'}</p>
-          <p className="modal" onClick={() => onSelectJob(job)}>Show more</p> {/* Pass the entire job object */}
+          <p className="modal" onClick={() => onSelectJob(job)}>Show more</p> 
         </div>
         <div>
           <p className="min-exp">Minimum Experience<br />{job.minExp || 'Not Mentioned'}</p>
