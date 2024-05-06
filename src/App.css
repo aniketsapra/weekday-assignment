@@ -132,6 +132,64 @@
   background: linear-gradient(to bottom, transparent, white);
 }
 
+.modal{
+  color: #2186ca;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure modal is on top */
+  overflow: auto; /* Allow scrolling when modal content exceeds viewport */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Maximum width of the modal */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.modal-background.active {
+  display: flex;
+}
+
+.modal-content.active {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .min-exp {
   color: #5f5f61;
 }
@@ -180,7 +238,6 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
 }
 
 .loading-buffer {

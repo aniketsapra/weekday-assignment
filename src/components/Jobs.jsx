@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import JobCard from "./JobCard";
 import FilterBar from "./FilterBar";
+import Modal from "./Modal";
 
 function JobsComponent() {
     const [jobs, setJobs] = useState([]);
@@ -12,6 +13,12 @@ function JobsComponent() {
     const limit = 6;
 
     const loader = useRef(null);
+
+    const [selectedJob, setSelectedJob] = useState(null);
+
+    const toggleModal = () => {
+        setSelectedJob(null); // Close the modal
+    };
 
     useEffect(() => {
         setPage(1); // Reset page number when filters change
@@ -93,7 +100,7 @@ function JobsComponent() {
 
             <div className="job-grid">
                 {jobs.map((job, index) => (
-                    <JobCard key={index} job={job} />
+                    <JobCard key={index} job={job} onSelectJob={() => setSelectedJob(job)} />
                 ))}
             </div>
             {loading && (
@@ -103,6 +110,9 @@ function JobsComponent() {
                 </div>
             )}
             <div ref={loader} />
+            {selectedJob && (
+                    <Modal job={selectedJob} onClose={toggleModal} />
+                )}
         </div>
     );
 }
